@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github page</title>
+    <style>
+        *, *:before, *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        }
+
+        a {
+        text-decoration: none;
+        color: #000;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+            padding: 0px;
+        }
+
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+            float: left;
+            margin: 0px;
+            padding: 15px;
+        }
+
+        .head {
+            height: 100px;
+            width: 100%;
+            padding: 0px 10px;
+            background: url(https://png.icons8.com/menu-filled/ios7/25) no-repeat 98% center;
+        }
+
+        .headContLeft {
+            float: left;
+            height: auto;
+            padding: 25px 0px;
+            font-size: 2em;
+        }
+
+        .headContRight {
+            display: none;
+        }
+
+        .subMenu {
+            display: none;
+            float: right;
+            font-size: 1.1em;
+            overflow: hidden;
+            padding-right: 5px;
+        }
+
+        .subMenu a {
+            display: block;
+            float: none;
+            text-align: right;
+            padding: 5px 5px;
+        }
+
+        .subMenu.open {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        @media only screen and (min-width: 600px) {
+            /* For tablets: */
+            .col-m-1 {width: 8.33%;}
+            .col-m-2 {width: 16.66%;}
+            .col-m-3 {width: 25%;}
+            .col-m-4 {width: 33.33%;}
+            .col-m-5 {width: 41.66%;}
+            .col-m-6 {width: 50%;}
+            .col-m-7 {width: 58.33%;}
+            .col-m-8 {width: 66.66%;}
+            .col-m-9 {width: 75%;}
+            .col-m-10 {width: 83.33%;}
+            .col-m-11 {width: 91.66%;}
+            .col-m-12 {width: 100%;}
+            
+            .head {
+                padding: 0px 20px;
+                background: none;
+            }
+            
+            .subMenu {
+                display: none;
+            }
+            
+            .subMenu.open {
+                display: none;
+            }
+            
+            .headContRight {
+                display: block;
+                float: right;
+                height: auto;
+                padding: 25px 0px;
+                line-height: 50px;
+                font-size: 1.1em;
+                overflow: visible;
+            }
+
+            .headContRight a {
+                float: left;
+                display: block;
+                padding: 0px 5px;
+                display: none;
+                display: inline;
+            }
+        
+        }
+
+        @media only screen and (min-width: 768px) {
+            /* For desktop: */
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+            
+            .head {
+                padding: 0px 45px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header class="head">
+        <div class="headContLeft">
+            <a href="index.html">Title</a>
+        </div>
+        <div class="headContRight">
+            <a href="#">About</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+            <a href="#">Social</a>
+        </div>
+    </header>
+            
+    <div class="subMenu">
+        <a href="#">About</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+        <a href="#">Social</a>
+    </div>
+</body>
+</html>
