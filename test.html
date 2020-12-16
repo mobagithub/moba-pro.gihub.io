@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <div id="container">
+        <span>Haha</span>
+        <button class="btn">Click Me</button>
+        <input type="text" data-help="Your full name">
+        <p id="help"></p>
+    </div>
+
+    <script>
+        const btn = document.querySelector('.btn');
+        btn.addEventListener('click', (e) => {
+            e.target.style.background = "green";
+            alert('btn clicked');
+        });
+
+        window.addEventListener('keydown', (event) => {
+            if (event.key === 't') {
+                document.body.style.background = "red";
+            }
+        })
+
+        let help = document.querySelector("#help");
+        let fields = document.querySelectorAll("input");
+        for (let field of Array.from(fields)) {
+            field.addEventListener("focus", event => {
+                let text = event.target.getAttribute("data-help");
+                help.textContent = text;
+            });
+            field.addEventListener("blur", event => {
+                help.textContent = "";
+            });
+        }
+    </script>
+</body>
+</html>
